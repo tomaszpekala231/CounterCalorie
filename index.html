@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CounterCalorie</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <a href="index.html" class="nav__title">CounterCalorie</a>
+                    <button type="button" class="nav__button clearAll">Clear All</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <div class="main__top">
+                    <section class="form-section">
+                        <div class="message"></div>
+                        <h3 class="form-section__title">
+                            Add Meal / Food Item
+                        </h3>
+                        <hr>
+
+                        <form class="form-section__form">
+                            <input type="hidden" class="hiddenInputID" value="">
+                            <input type="text" class="meal form-control" placeholder="Enter meal">
+                            <input type="number" class="calorie form-control" placeholder="Enter calorie">
+
+                            <input type="number" class="nutritions proteins" placeholder="Enter proteins">
+
+                            <input type="number" class="nutritions carbs ml-5" placeholder="Enter carbohydrates">
+
+                            <input type="number" class="nutritions fat ml-5" placeholder="Enter fat">
+
+                            <button type="button" class="btn btnAdd"><span class="btnAdd__span">Add Meal</span> </button>
+                            <button type="button" class="btn btnEdit"><span class="btnEdit__span">Edit</span> </button>
+                            <button type="button" class="btnCancel"><span class="btnCancel__span">Cancel</span> </button>
+                        </form>
+
+                    </section>
+            
+                    <section class="results">
+                        <h3 class="results__title">
+                            Total calorie: <span class="results__totalCalorie" >1800</span> 
+                        </h3>
+                        <hr>
+                        <p class="results__proteins">
+                            Total proteins: <b><span class="results__totalProteins">30</span> </b>
+                        </p>
+                        <hr>
+                        <p class="results__proteins">
+                            Total proteins: <b><span class="results__totalCarbs">50</span> </b>
+                        </p>
+                        <hr>
+                        <p class="results__proteins">
+                            Total proteins: <b><span class="results__totalFat">20</span> </b>
+                        </p>
+                        <hr>
+                    </section>
+                </div>
+               
+
+                <div class="main__bottom">
+                    <section class="items">
+                            <table class="items__table">
+                                <thead>
+                                    <tr>
+                                        <th><span>Name</span> </th>
+                                        <th>Calorie</th>
+                                        <th>Proteins</th>
+                                        <th>Carbohydrates</th>
+                                        <th>Fat</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="items__table--tbody">
+
+                                </tbody>
+                             </table>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <script src="app.js"></script>
+        <!-- <script src="appminified.js"></script> -->
+</body>
+</html>

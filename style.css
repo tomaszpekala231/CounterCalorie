@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%; 
+}
+  
+body {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.5;
+}
+.ml-5 {
+    margin-left: .5rem;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 1.4rem;
+}
+.alert.error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert.success{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.header {
+    background-color: #007bff;
+    height: 4.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.nav__title {
+    display: block;
+    text-decoration: none;
+    font-size:2rem;
+    color:#fff;
+    font-weight: bold;
+}
+
+.nav__button {
+    display: block;
+    background-color: #0000CD;
+    color: #fff;
+    border: 2px solid #0000CD;
+    padding: .5rem 1rem;
+    font-size:1.5rem;
+    border-radius:2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.nav__button:hover {
+    background-color: #2222CD;
+    border: 2px solid #2222CD;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+.main {
+    margin-top:5rem;
+}
+.main__top {
+    display: flex;
+}
+
+.form-section {
+    flex: 0 0 50%;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 1rem;
+}
+.form-section__title, .results__title {
+    font-size: 2rem;
+}
+.form-control {
+    display: block;
+    width: 95%;
+    height: calc(1.2em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin: 1rem 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.nutritions {
+    display: inline-block;
+    width: 25%;
+    height: calc(1rem + .75rem + 2px);
+    padding: .375rem .75rem;
+}
+.btnAdd {
+    display: block;
+    background-color: #0062cc;
+    color: #fff;
+    border: 2px solid #0062cc;
+    padding: .5rem 1rem;
+    font-size:1.5rem;
+    border-radius:2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 95%;
+}
+
+.results {
+    flex: 0 0 50%;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+.results p {
+    font-size: 1.5rem;
+}
+.results span {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.main__bottom {
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 80rem;
+    
+}
+
+.items__table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  .items__table td, .items__table th {
+    border: 1px solid #ddd;
+    padding: .8rem;
+  }
+  
+  .items__table tr:nth-child(even){background-color: #efefef;}
+  
+  
+  .items__table th {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    text-align: left;
+    background-color: #4d4dff;
+    color: white;
+  }
+
+  .btnDelete {
+    display: inline-block;
+    background-color: #cc0000;
+    color: #fff;
+    border: 2px solid #cc0000;
+    padding: .5rem 1rem;
+    border-radius:2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 40%;
+  }
+
+  
+.btnEdit {
+    display: none;
+    background-color: #ffc107;
+    color: #fff;
+    border: 2px solid #ffc107;
+    padding: .5rem 1rem;
+    border-radius:2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 1rem;
+    margin-left: .5rem;
+}
+.linkEdit {
+    display: inline-block;
+    text-align: center;
+    background-color: #ffc107;
+    color: #fff;
+    border: 2px solid #ffc107;
+    padding: .2rem 1rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 30%;
+    margin-left: .5rem;
+}
+.btnCancel {
+    display: none;
+    text-align: center;
+    background-color: #0000CD;
+    color: #fff;
+    border: 2px solid #0000CD;
+    padding: .5rem 1rem;
+    border-radius:2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 1rem;
+    margin-left: .5rem;
+}
