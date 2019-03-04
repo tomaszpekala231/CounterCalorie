@@ -75,6 +75,7 @@ body {
 .container {
     max-width: 1000px;
     margin: auto;
+  
 }
 .main {
     margin-top:5rem;
@@ -90,6 +91,7 @@ body {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     padding: 1rem;
+    margin: 0 1rem;
 }
 .form-section__title, .results__title {
     font-size: 2rem;
@@ -113,10 +115,12 @@ body {
 
 .nutritions {
     display: inline-block;
-    width: 25%;
+    width: 27%;
     height: calc(1rem + .75rem + 2px);
     padding: .375rem .75rem;
 }
+
+
 .btnAdd {
     display: block;
     background-color: #0062cc;
@@ -132,13 +136,13 @@ body {
 }
 
 .results {
-    flex: 0 0 50%;
+    flex: 0 1 50%;
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     padding: 1rem;
-    margin-left: 2rem;
+    margin: 0 2rem;
 }
 .results p {
     font-size: 1.5rem;
@@ -195,7 +199,7 @@ hr {
     border-radius:2px;
     text-transform: uppercase;
     cursor: pointer;
-    width: 40%;
+    width: 9rem;
   }
 
   
@@ -222,7 +226,7 @@ hr {
     border-radius: 2px;
     text-transform: uppercase;
     cursor: pointer;
-    width: 30%;
+    width: 6.6rem;
     margin-left: .5rem;
 }
 .btnCancel {
@@ -239,3 +243,43 @@ hr {
     margin-top: 1rem;
     margin-left: .5rem;
 }
+
+
+@media (max-width: 765px) { 
+
+    .main__top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-section {
+       
+        flex: 0 1 100%;
+    }
+
+    .nutritions-carbs, .nutritions-proteins, .nutritions-fat {
+        display: block;
+        width: 95%;
+        height: calc(1.2em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        margin: 1rem 0;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .linkEdit {
+        margin-left: 0;
+        margin-top: 0.2rem;
+    }
+
+    .results {
+        margin-top: 3rem;
+        flex: 0 1 100%;
+    }
+ }
