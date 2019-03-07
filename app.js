@@ -260,14 +260,18 @@ const UIController = (function() {
             if(meal === '' || calorie ==='' || proteins === '' || carbs === '' || fat === ''){
                 // show message
             }else {
-                 data = {
-                    'mealName': meal,
-                    'calorie': calorie,
-                    'proteins': proteins,
-                    'carbs': carbs,
-                    'fat': fat
+                if(calorie < 0 || proteins < 0 || carbs < 0 || fat < 0) {
+                   data = false;
+                }else {
+                    data = {
+                        'mealName': meal,
+                        'calorie': calorie,
+                        'proteins': proteins,
+                        'carbs': carbs,
+                        'fat': fat
+                    }
                 }
-                
+
             }
                 return data;
 
@@ -415,6 +419,7 @@ const controller = (function(calorieCtrl, UICtrl) {
 
         // 2. Check if array is not empty
         if(!isEmpty(dataInput)) {
+            if(dataInput !== false) {
             // 3. Add the item to calorie controller
             calorieCtrl.addMealToData(dataInput.mealName, parseFloat(dataInput.calorie), parseFloat(dataInput.proteins), parseFloat(dataInput.carbs), parseFloat(dataInput.fat));
 
@@ -435,7 +440,10 @@ const controller = (function(calorieCtrl, UICtrl) {
             UICtrl.focusInput();
             // 7. UI Controller clear fields
             UICtrl.clearInput();
-
+            }else {
+                //show message
+                document.querySelector(DOM.message).innerHTML = UICtrl.message("Numbers can only be equal 0 or bigger than 0!", 'error');
+            }
            
             
         }else {
@@ -470,6 +478,7 @@ const controller = (function(calorieCtrl, UICtrl) {
                  const dataInput = UICtrl.getInputData();
                 // console.log(ID);
                  if(!isEmpty(dataInput)) {
+                    if(dataInput !== false) {
                     //update item 
                     const updateItem = calorieCtrl.updateItem(parseInt(item.id), dataInput);
                     
@@ -498,6 +507,10 @@ const controller = (function(calorieCtrl, UICtrl) {
                     UICtrl.focusInput();
                     // 6. UI Controller clear fields
                     UICtrl.clearInput();
+                    }else {
+                         //show message
+                        document.querySelector(DOM.message).innerHTML = UICtrl.message("Numbers can only be equal 0 or bigger than 0!", 'error');
+                    }
                   
                  }
 
